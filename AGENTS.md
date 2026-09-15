@@ -36,6 +36,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 - /spec Usaremos esta skill para crear las especificaciones
 - /spec-impl Usaremos esta skill para hacer las implementaciones
+- @spec-verifier Verifica, corrige y marca los checks del "Criterios de aceptación" de un spec (`.opencode/agents/spec-verifier.md`, modelo con visión)
 
 ## Reglas de código
 
