@@ -1,6 +1,6 @@
 # Spec 01 — Feed como Home
 
-**Estado:** Approved
+**Estado:** Implemented
 **Depende de:** ninguno
 **Fecha:** 2026-09-15
 **Objetivo:** Implementar la pantalla `references/pantallas/feed.dc.html` como home `/` con estilo idéntico al mockup, sin autenticación ni base de datos.
@@ -60,17 +60,17 @@ Badge, color de avatar y color de badge derivados de `type` (map type → clases
 
 ## Criterios de aceptación
 
-- [ ] `/` renderiza el feed visualmente idéntico a `feed.dc.html` (comparación lado a lado con screenshot).
-- [ ] Sidebar desktop 248px sticky con logo, botón «Nueva publicación», 4 ítems de nav y bloque de usuario.
-- [ ] Ítem Feed marcado activo (fondo #FBE3D8, texto #D9583C).
-- [ ] 3 posts con badges LOGRO/ACTIVIDAD/ANUNCIO y colores del template.
-- [ ] Post de actividad muestra placeholder de foto dashed, 200px de alto.
-- [ ] <768px: sidebar oculto, botón hamburguesa abre drawer con el mismo contenido.
-- [ ] Fredoka y Nunito cargan vía `next/font` (sin `<link>` a Google Fonts).
-- [ ] Colores vía tokens `@theme` en `globals.css`.
-- [ ] `npm run lint` y `npx tsc --noEmit` pasan sin errores.
-- [ ] Identificadores de código en inglés (variables, funciones, tipos); texto UI en español.
-- [ ] Links a páginas inexistentes son `href="#"`.
+- [x] `/` renderiza el feed visualmente idéntico a `feed.dc.html` (comparación lado a lado con screenshot).
+- [x] Sidebar desktop 248px sticky con logo, botón «Nueva publicación», 4 ítems de nav y bloque de usuario.
+- [x] Ítem Feed marcado activo (fondo #FBE3D8, texto #D9583C).
+- [x] 3 posts con badges LOGRO/ACTIVIDAD/ANUNCIO y colores del template.
+- [x] Post de actividad muestra placeholder de foto dashed, 200px de alto.
+- [x] <768px: sidebar oculto, botón hamburguesa abre drawer con el mismo contenido.
+- [x] Fredoka y Nunito cargan vía `next/font` (sin `<link>` a Google Fonts).
+- [x] Colores vía tokens `@theme` en `globals.css`.
+- [x] `npm run lint` y `npx tsc --noEmit` pasan sin errores.
+- [x] Identificadores de código en inglés (variables, funciones, tipos); texto UI en español.
+- [x] Links a páginas inexistentes son `href="#"`.
 
 ## Decisiones tomadas
 

@@ -1,7 +1,7 @@
 ---
 description: Verificador de criterios de aceptación de specs. Revisa el código y las pantallas, corrige lo que falla y marca los checks del "Criterios de aceptación" de un spec en specs/. Usa Context7 para validar el uso de Next.js y Playwright MCP con visión para comparar screenshots contra references/. Invocar como @spec-verifier <NN|slug|ruta del spec>.
 mode: all
-model: opencode/qwen3.6-plus
+model: opencode-go/qwen3.6-plus
 temperature: 0.1
 permission:
   read: allow
