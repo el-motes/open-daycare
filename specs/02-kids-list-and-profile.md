@@ -1,6 +1,6 @@
 # Spec 02 — Niños: lista y perfil (`/kids`)
 
-**Estado:** Approved
+**Estado:** Implemented
 **Depende de:** SPEC 01
 **Fecha:** 2026-09-15
 **Objetivo:** Implementar las pantallas `ninos.dc.html` y `perfil-nino.dc.html` como `/kids` y `/kids/[id]` (solo interfaces y componentes, sin lógica de negocio), extrayendo el sidebar a componente compartido.
@@ -70,20 +70,20 @@ Texto «N padres vinculados» / «sin padres vinculados» se deriva de `parents.
 
 ## Criterios de aceptación
 
-- [ ] `/kids` visualmente idéntico a `ninos.dc.html` (screenshot lado a lado).
-- [ ] `/kids/mateo-fernandez` visualmente idéntico a `perfil-nino.dc.html`.
-- [ ] Grid 2 columnas, 8 cards, hover borde `#F2A78E` + `translateY(-2px)`.
-- [ ] Badges MANÍ, LACTOSA, VINCULAR según niño; chevron en cards sin badge.
-- [ ] Buscador filtra cards por nombre en vivo; borrar texto restaura las 8.
-- [ ] Card entera navega a `/kids/[id]`.
-- [ ] Panel alergias solo en niños con `allergyNotes`; sin él, no se renderiza.
-- [ ] Perfil: badges ACTIVA/PENDIENTE por estado de padre + «Vincular otro padre» `href="#"`.
-- [ ] `/` sin cambios visuales respecto a spec 01; Feed activo en `/`, Niños activo en `/kids` y `/kids/[id]`.
-- [ ] `/kids/id-inexistente` → 404 (`notFound()`).
-- [ ] Móvil <768px: drawer hamburguesa funciona en las tres páginas.
-- [ ] Links a pantallas futuras son `href="#"`.
-- [ ] `npm run lint` y `npx tsc --noEmit` pasan sin errores.
-- [ ] Identificadores en inglés; texto UI en español.
+- [x] `/kids` visualmente idéntico a `ninos.dc.html` (screenshot lado a lado).
+- [x] `/kids/mateo-fernandez` visualmente idéntico a `perfil-nino.dc.html`.
+- [x] Grid 2 columnas, 8 cards, hover borde `#F2A78E` + `translateY(-2px)`.
+- [x] Badges MANÍ, LACTOSA, VINCULAR según niño; chevron en cards sin badge.
+- [x] Buscador filtra cards por nombre en vivo; borrar texto restaura las 8.
+- [x] Card entera navega a `/kids/[id]`.
+- [x] Panel alergias solo en niños con `allergyNotes`; sin él, no se renderiza.
+- [x] Perfil: badges ACTIVA/PENDIENTE por estado de padre + «Vincular otro padre» `href="#"`.
+- [x] `/` sin cambios visuales respecto a spec 01; Feed activo en `/`, Niños activo en `/kids` y `/kids/[id]`.
+- [x] `/kids/id-inexistente` → 404 (`notFound()`).
+- [x] Móvil <768px: drawer hamburguesa funciona en las tres páginas.
+- [x] Links a pantallas futuras son `href="#"`.
+- [x] `npm run lint` y `npx tsc --noEmit` pasan sin errores.
+- [x] Identificadores en inglés; texto UI en español.
 
 ## Decisiones tomadas
 
