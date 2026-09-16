@@ -3,16 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import Sidebar from "@/app/components/sidebar";
-import { children, type AvatarColor } from "@/app/lib/mock-data";
-
-const avatarStyles: Record<AvatarColor, string> = {
-  sky: "bg-child-avatar-bg text-child-avatar-ink",
-  pink: "bg-child-avatar-pink-bg text-child-avatar-pink-ink",
-  green: "bg-child-avatar-green-bg text-child-avatar-green-ink",
-  yellow: "bg-child-avatar-yellow-bg text-child-avatar-yellow-ink",
-  violet: "bg-child-avatar-violet-bg text-child-avatar-violet-ink",
-  blue: "bg-child-avatar-blue-bg text-child-avatar-blue-ink",
-};
+import { children } from "@/app/lib/mock-data";
+import { avatarStyles } from "@/app/lib/avatar-styles";
 
 function parentsLabel(count: number) {
   if (count === 0) return "sin padres vinculados";
