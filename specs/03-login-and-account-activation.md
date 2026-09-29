@@ -37,18 +37,18 @@ Sin datos nuevos. Markup estático sin `useState`; valores default de los mockup
 
 ## Criterios de aceptación
 
-- [ ] `/login` visualmente idéntico a `login.dc.html` excepto el bloque «INGRESO COMO» que no existe.
-- [ ] `/activate` visualmente idéntico a `activar-cuenta.dc.html`.
-- [ ] Cero botones/traza del selector Personal/Familia en `/login`.
-- [ ] «Iniciar sesión» y «Activar mi cuenta» son `href="#"` inertes.
-- [ ] «¿Olvidaste tu contraseña?» `href="#"`.
-- [ ] Cross-links reales: `/login` → «Activá tu cuenta» → `/activate`; `/activate` → «Iniciar sesión» → `/login`.
-- [ ] «Cerrar sesión» del sidebar navega a `/login` (desktop y drawer móvil).
-- [ ] Inputs con defaults de mockup (`caro@opendaycare.com`, `7K4P9`, `lucia.fernandez@gmail.com`); checkbox autorización marcado.
-- [ ] Móvil <768px: hero de `/login` oculto, form centrado; `/activate` una columna.
-- [ ] `/login` y `/activate` sin sidebar (pantallas full-screen independientes).
-- [ ] `npm run lint` y `npx tsc --noEmit` sin errores.
-- [ ] Identificadores en inglés; texto UI en español.
+- [x] `/login` visualmente idéntico a `login.dc.html` excepto el bloque «INGRESO COMO» que no existe.
+- [x] `/activate` visualmente idéntico a `activar-cuenta.dc.html`.
+- [x] Cero botones/traza del selector Personal/Familia en `/login`.
+- [x] «Iniciar sesión» y «Activar mi cuenta» son `href="#"` inertes.
+- [x] «¿Olvidaste tu contraseña?» `href="#"`.
+- [x] Cross-links reales: `/login` → «Activá tu cuenta» → `/activate`; `/activate` → «Iniciar sesión» → `/login`.
+- [x] «Cerrar sesión» del sidebar navega a `/login` (desktop y drawer móvil).
+- [x] Inputs con defaults de mockup (`caro@opendaycare.com`, `7K4P9`, `lucia.fernandez@gmail.com`); checkbox autorización marcado.
+- [x] Móvil <768px: hero de `/login` oculto, form centrado; `/activate` una columna.
+- [x] `/login` y `/activate` sin sidebar (pantallas full-screen independientes).
+- [x] `npm run lint` y `npx tsc --noEmit` sin errores.
+- [x] Identificadores en inglés; texto UI en español.
 
 ## Decisiones tomadas
 
