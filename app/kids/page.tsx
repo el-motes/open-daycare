@@ -4,7 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import Sidebar from "@/app/components/sidebar";
 import AddKidDialog from "@/app/components/add-kid-dialog";
-import { children, type Child } from "@/app/lib/mock-data";
+import type { Child } from "@/app/lib/mock-data";
+import { addKid as addToStore, getKids } from "@/app/lib/kids-store";
 import { avatarStyles } from "@/app/lib/avatar-styles";
 
 function parentsLabel(count: number) {
@@ -14,7 +15,7 @@ function parentsLabel(count: number) {
 }
 
 export default function KidsPage() {
-  const [kids, setKids] = useState<Child[]>(children);
+  const [kids, setKids] = useState<Child[]>(getKids());
   const [query, setQuery] = useState("");
   const [dialogOpen, setDialogOpen] = useState(false);
 
@@ -23,7 +24,7 @@ export default function KidsPage() {
   );
 
   function handleAdd(child: Child) {
-    setKids((prev) => [child, ...prev]);
+    setKids(addToStore(child));
   }
 
   return (

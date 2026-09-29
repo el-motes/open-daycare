@@ -1,16 +1,15 @@
-import { notFound } from "next/navigation";
+"use client";
+
+import { notFound, useParams } from "next/navigation";
 import Link from "next/link";
 import Sidebar from "@/app/components/sidebar";
-import { children, parentStatusLabel } from "@/app/lib/mock-data";
+import { parentStatusLabel } from "@/app/lib/mock-data";
+import { getKids } from "@/app/lib/kids-store";
 import { avatarStyles, parentAvatarStyles } from "@/app/lib/avatar-styles";
 
-export default async function ChildProfilePage({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
-  const { id } = await params;
-  const child = children.find((c) => c.id === id);
+export default function ChildProfilePage() {
+  const { id } = useParams<{ id: string }>();
+  const child = getKids().find((c) => c.id === id);
   if (!child) notFound();
 
   return (
