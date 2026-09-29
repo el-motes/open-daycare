@@ -55,6 +55,15 @@
   --color-placeholder-bg: #f4ece1;
   --color-placeholder-line: #dbcdba;
   --color-placeholder-ink: #b0a290;
+  --color-auth-bg: #fbf4ec;
+  --color-auth-line: #eadfd0;
+  --color-auth-placeholder: #b6a99b;
+  --color-hero-from: #f6a98e;
+  --color-hero-mid: #f2937a;
+  --color-hero-to: #ec7e62;
+  --color-auth-check-bg: #fbf1d6;
+  --color-auth-check: #5fb97e;
+  --color-auth-check-ink: #8a7234;
 }
 
 @theme inline {
