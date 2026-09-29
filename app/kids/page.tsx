@@ -3,7 +3,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import Sidebar from "@/app/components/sidebar";
-import { children } from "@/app/lib/mock-data";
+import AddKidDialog from "@/app/components/add-kid-dialog";
+import type { Child } from "@/app/lib/mock-data";
+import { addKid as addToStore, getKids } from "@/app/lib/kids-store";
 import { avatarStyles } from "@/app/lib/avatar-styles";
 
 function parentsLabel(count: number) {
@@ -13,11 +15,17 @@ function parentsLabel(count: number) {
 }
 
 export default function KidsPage() {
+  const [kids, setKids] = useState<Child[]>(getKids());
   const [query, setQuery] = useState("");
+  const [dialogOpen, setDialogOpen] = useState(false);
 
-  const filtered = children.filter((child) =>
+  const filtered = kids.filter((child) =>
     child.name.toLowerCase().includes(query.trim().toLowerCase())
   );
+
+  function handleAdd(child: Child) {
+    setKids(addToStore(child));
+  }
 
   return (
     <div className="flex min-h-screen bg-bg">
@@ -30,12 +38,16 @@ export default function KidsPage() {
               <div className="mb-1 text-[12.5px] font-extrabold tracking-[.8px] text-accent">GESTIÓN</div>
               <h1 className="font-display text-[30px] font-semibold text-ink">Niños</h1>
             </div>
-            <a href="#" className="flex items-center gap-2 rounded-[14px] bg-gradient-to-b from-btn-from to-btn-to px-[18px] py-[11px] text-[14.5px] font-extrabold text-white shadow-[0_8px_18px_-8px_rgba(238,129,100,.7)]">
+            <button
+              type="button"
+              onClick={() => setDialogOpen(true)}
+              className="flex items-center gap-2 rounded-[14px] bg-gradient-to-b from-btn-from to-btn-to px-[18px] py-[11px] text-[14.5px] font-extrabold text-white shadow-[0_8px_18px_-8px_rgba(238,129,100,.7)]"
+            >
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 5v14M5 12h14" />
               </svg>
               Agregar niño
-            </a>
+            </button>
           </div>
 
           <div className="mb-[22px] flex items-center gap-[11px] rounded-[14px] border border-line bg-panel px-4 py-3">
@@ -53,7 +65,7 @@ export default function KidsPage() {
 
           <div className="mb-3.5 flex items-center gap-3">
             <span className="text-[12.5px] font-extrabold tracking-[.8px] text-ink">SALA SOLES</span>
-            <span className="text-[13px] text-meta">8 niños</span>
+            <span className="text-[13px] text-meta">{kids.length} niños</span>
             <span className="h-px flex-1 bg-divider" />
           </div>
 
@@ -87,6 +99,14 @@ export default function KidsPage() {
               </Link>
             ))}
           </div>
+
+          {dialogOpen && (
+            <AddKidDialog
+              listLength={kids.length}
+              onClose={() => setDialogOpen(false)}
+              onAdd={handleAdd}
+            />
+          )}
         </div>
       </main>
     </div>

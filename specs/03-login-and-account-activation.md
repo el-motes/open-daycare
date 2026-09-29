@@ -1,6 +1,6 @@
 # Spec 03 — Login y activación de cuenta (`/login`, `/activate`)
 
-**Estado:** Approved
+**Estado:** Implemented
 **Depende de:** SPEC 01, SPEC 02
 **Fecha:** 2026-09-29
 **Objetivo:** Implementar `login.dc.html` y `activar-cuenta.dc.html` como `/login` y `/activate` (solo UI estática, sin selector de rol, sin autenticación), y apuntar «Cerrar sesión» del sidebar a `/login`.
