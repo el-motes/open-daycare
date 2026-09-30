@@ -10,6 +10,9 @@
 			"template": "Carga y sigue la skill spec-impl en .agents/skills/spec-impl/SKILL.md.\n\nFeature: $ARGUMENTS"
 		}
 	},
+	"permission": {
+		"bash": "allow"
+	},
 	"mcp": {
 		"playwright": {
 			"type": "local",
