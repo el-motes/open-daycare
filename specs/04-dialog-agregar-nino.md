@@ -43,14 +43,14 @@ Avatar: ciclo `["sky","pink","green","yellow","violet"]` por `list.length % 5`.
 
 ## Criterios de aceptación
 
-- [ ] Click «Agregar niño» abre modal overlay con backdrop; card fiel a `agregar-nino.dc.html`.
-- [ ] Cancelar, Esc y click en backdrop cierran sin cambios en la lista.
-- [ ] Guardar con nombre vacío o fecha inválida/futura muestra error inline; no agrega.
-- [ ] Guardar válido antepone card con iniciales, avatar, slug id, edad y badge de alergia correctos; contador pasa a 9 niños.
-- [ ] Perfil del niño nuevo (`/kids/[slug]`) renderiza con sus datos.
-- [ ] Recargar `/kids` restaura los 8 mock (in-memory).
-- [ ] `npm run lint` y `npx tsc --noEmit` sin errores.
-- [ ] Identificadores en inglés; texto UI en español.
+- [x] Click «Agregar niño» abre modal overlay con backdrop; card fiel a `agregar-nino.dc.html`.
+- [x] Cancelar, Esc y click en backdrop cierran sin cambios en la lista.
+- [x] Guardar con nombre vacío o fecha inválida/futura muestra error inline; no agrega.
+- [x] Guardar válido antepone card con iniciales, avatar, slug id, edad y badge de alergia correctos; contador pasa a 9 niños.
+- [x] Perfil del niño nuevo (`/kids/[slug]`) renderiza con sus datos.
+- [x] Recargar `/kids` restaura los 8 mock (in-memory).
+- [x] `npm run lint` y `npx tsc --noEmit` sin errores.
+- [x] Identificadores en inglés; texto UI en español.
 
 ## Decisiones tomadas
 
